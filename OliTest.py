@@ -17,10 +17,6 @@ def monitor_system():
         disk_usage = psutil.disk_usage('/')
         print(f"Disk Usage: {disk_usage.percent}%")
         
-        # Network usage
-        network = psutil.net_io_counters()
-        print(f"Bytes Sent: {network.bytes_sent}, Bytes Received: {network.bytes_recv}")
-        
         # Adding a separator for readability
         print("-" * 50)
         
@@ -32,4 +28,5 @@ def monitor_system():
 
 if __name__ == '__main__':
     monitor_system()
+
 
